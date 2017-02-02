@@ -34,3 +34,27 @@ function verifyItems(origItems, origPrices, items, prices) {
 
 
 }
+
+// substring
+
+function buildSubsequences(s) {
+
+  let result = {}
+
+  	function sub(s) {
+    	//base case
+      // !s.length
+
+      	result[s] = 1
+
+        for (let i = 0; i<s.length; i++) {
+        		let newString = s.substr(0, 1) + s.substr(i+1)
+            if(!result[newString] && newString.length) {
+            	sub(newString)
+            }
+        }
+
+    }
+  sub(s)
+  return Object.keys(result).sort();
+}
