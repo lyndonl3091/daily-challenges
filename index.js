@@ -19,3 +19,18 @@ var twoSum = function(nums, target) {
 
 
 };
+
+// using memo
+function verifyItems(origItems, origPrices, items, prices) {
+	var items = items.reduce(function(memo,item,i) {
+  		memo[item] = prices[i]
+      return memo
+  }, {})
+
+  return origItems.reduce(function(count, origITem, i) {
+  		return (items[origItem] && items[origItem] !== origPrices[i]) ?
+      	count + 1 : count;
+  }, 0)
+
+
+}
