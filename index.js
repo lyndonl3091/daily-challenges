@@ -58,3 +58,22 @@ function buildSubsequences(s) {
   sub(s)
   return Object.keys(result).sort();
 }
+
+//return 1 if it exist in the BST, 0 if not
+
+this.isPresent = function(root, val) {
+        // Add your code here
+        let node = root;
+    while(node) {
+        if(node.data === val) {
+            return 1
+        } else {
+            if(val > node.data) {
+                node = node.right
+            } else {
+                node = node.left
+            }
+        }
+    }
+        return 0;
+	};
