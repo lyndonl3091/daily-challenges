@@ -20,20 +20,6 @@ var twoSum = function(nums, target) {
 
 };
 
-// using memo
-function verifyItems(origItems, origPrices, items, prices) {
-	var items = items.reduce(function(memo,item,i) {
-  		memo[item] = prices[i]
-      return memo
-  }, {})
-
-  return origItems.reduce(function(count, origITem, i) {
-  		return (items[origItem] && items[origItem] !== origPrices[i]) ?
-      	count + 1 : count;
-  }, 0)
-
-
-}
 
 // substring
 
@@ -58,22 +44,3 @@ function buildSubsequences(s) {
   sub(s)
   return Object.keys(result).sort();
 }
-
-//return 1 if it exist in the BST, 0 if not
-
-this.isPresent = function(root, val) {
-        // Add your code here
-        let node = root;
-    while(node) {
-        if(node.data === val) {
-            return 1
-        } else {
-            if(val > node.data) {
-                node = node.right
-            } else {
-                node = node.left
-            }
-        }
-    }
-        return 0;
-	};
