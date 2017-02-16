@@ -17,7 +17,6 @@ var twoSum = function(nums, target) {
         }
     }
 
-
 };
 
 
@@ -43,4 +42,28 @@ function buildSubsequences(s) {
     }
   sub(s)
   return Object.keys(result).sort();
+}
+
+
+// zigzag array
+
+function zigzagArray( intArray) {
+
+	intArray.sort((a, b) => a-b);
+
+  let resArray = [];
+
+  let flag = true;
+
+  while(intArray.length) {
+  	if(flag) {
+    	var num = intArray.pop();
+    } else {
+      var num = intArray.shift();
+    }
+    resArray.push(num);
+    flag = !flag;
+  }
+
+  return resArray;
 }
