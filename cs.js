@@ -43,7 +43,7 @@ this.isPresent = function(root, val) {
       } else {
       currentNode = currentNode.next;
       nextNode = nextNode.next;
-      }
+    }
     }
 
   	return head;
