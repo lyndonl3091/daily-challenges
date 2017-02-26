@@ -22,3 +22,21 @@ function camelCaser (str) {
 	return camelWords.join('');
 
 }
+
+
+// shuffle function
+
+function shuffle(arr) {
+	var shuffled = [];
+
+  while(arr.length) {
+  	var index = Math.floor(Math.random() * arr.length);
+
+    var removedArr = arr.splice(index, 1); //splice will always return an array
+
+		shuffled = shuffled.concat(removedArr);
+
+  }
+
+  return shuffled;
+}
