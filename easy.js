@@ -40,3 +40,22 @@ function shuffle(arr) {
 
   return shuffled;
 }
+
+
+// capitalize 3rd
+
+function capitalizeEveryThird(str) {
+	var words = str.toLowerCase().split(' ');
+
+  var newWords = words.map(function(word, i) {
+  		if(i%3 === 2) {
+      	return word.toUpperCase();
+      }
+      else {
+      	return word;
+      }
+  });
+
+
+  return words.join(' ');
+}
