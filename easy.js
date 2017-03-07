@@ -47,6 +47,20 @@ function shuffle(arr) {
 function capitalizeEveryThird(str) {
 	var words = str.split(' ');
 
+  for(var i = 0; i <words.length; i++) {
+  	if( i % 3 === 2) {
+    	words[i] = words[i].toUpperCase();
+    }
+    else {
+    	words[i] = words[i].toLowerCase();
+    }
+  }
+  return words.join(' ');
+}
+
+function capitalizeEveryThird(str) {
+	var words = str.split(' ');
+
   for(var i = 2; i <words.length; i += 3) {
   	words[i] = words[i].toUpperCase();
   }
