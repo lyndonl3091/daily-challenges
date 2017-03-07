@@ -45,6 +45,15 @@ function shuffle(arr) {
 // capitalize 3rd
 
 function capitalizeEveryThird(str) {
+	var words = str.split(' ');
+
+  for(var i = 2; i <words.length; i += 3) {
+  	words[i] = words[i].toUpperCase();
+  }
+  return words.join(' ');
+}
+
+function capitalizeEveryThird(str) {
 	var words = str.toLowerCase().split(' ');
 
   var newWords = words.map(function(word, i) {
