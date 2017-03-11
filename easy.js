@@ -82,3 +82,9 @@ function capitalizeEveryThird(str) {
 
   return words.join(' ');
 }
+
+var arr = [1,2,3,4,5,24326];
+
+var largest = arr.reduce(function(x,y){
+       return (x > y) ? x : y;
+});
