@@ -88,3 +88,21 @@ var arr = [1,2,3,4,5,24326];
 var largest = arr.reduce(function(x,y){
        return (x > y) ? x : y;
 });
+
+var wordSelector = function(string) {
+ var words = string.split(" ");
+  console.log(words);
+
+function findMaxFreq(word){
+  	// find number of times the most frequent letter appears
+   var bins = {};
+    for (var i = 0; i < word.length; i++) {
+        bins[word[i]] = (bins[word[i]] || 0) + 1;
+    };
+    var max = 0;
+    for (var c in bins) {
+        max = Math.max(max, bins[c]);
+    };
+    return max;
+
+  };
