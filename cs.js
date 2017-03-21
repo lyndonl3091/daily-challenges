@@ -64,3 +64,63 @@ this.isPresent = function(root, val) {
 
 
   }
+
+  // singly linked list
+
+  function LinkedList() {
+    this.head = null;
+  }
+
+  LinkedList.prototype.push = function(val) {
+    var node = {
+      valueL val,
+      next: null
+    }
+
+    if(!this.head) {
+      this.head = node;
+    }
+
+    else {
+      current = this.head;
+      while(current.next) {
+        current = current.next;
+      }
+      current.next = node;
+    }
+  }
+
+
+  // reverse a singly-linked list and return the start of the reversed list
+
+  // iterative
+
+  function reverseLinkedList(list) {
+
+      if(!list.head || !list.head.next) return list;
+
+      var nodes = [],
+          current = list.head;
+
+      while(current) {
+        nodes.push(current);
+        current = current.next;
+      }
+
+      var reversedLl = new LinkedList();
+
+      reversedLl.head = nodes.pop();
+      current = reservedLl.head;
+
+      var node = nodes.pop();
+
+      while(node) {
+        node.next = null;
+        current.next = node;
+
+        current = current.next;
+        node = nodes.pop();
+      }
+
+    return reversedLl;
+  }
