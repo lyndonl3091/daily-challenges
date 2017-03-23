@@ -91,6 +91,36 @@ this.isPresent = function(root, val) {
   }
 
 
+// doubly linked list
+
+var node = {
+  value: val,
+  next: null,
+  previous: null,
+}
+
+function doublyLinkedList() {
+  this.head = null;
+}
+
+doublyLinkedList.prototype.push = function(val) {
+  var head = this.head,
+      current = head,
+      previous = head;
+
+  if(!head) {
+    this.head = { value: val, previous: null, next: null };
+
+  }
+  else {
+    while(current && current.next) {
+      previous = current;
+      current = current.next;
+    }
+    current.next = { value: val, previous: current, next: null }
+  }
+}
+
   // reverse a singly-linked list and return the start of the reversed list
 
   // iterative
