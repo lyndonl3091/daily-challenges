@@ -125,7 +125,7 @@ doublyLinkedList.prototype.push = function(val) {
 
   // iterative
 
-  function reverseLinkedList(list) {
+  function reverseSinglyLinkedList(list) {
 
       if(!list.head || !list.head.next) return list;
 
@@ -154,3 +154,22 @@ doublyLinkedList.prototype.push = function(val) {
 
     return reversedLl;
   }
+
+  // reverse double LL
+
+  function reverseDoublyLinkedList(list){
+   var head = list.head,
+       current = list.head,
+       tmp;
+   while(current){
+      tmp = current.next;
+      current.next = current.previous;
+      current.previous = tmp;
+      if(!tmp){
+         //set the last node as header
+         list.head = current;
+      }
+      current = tmp;
+   }
+  return list;
+}
