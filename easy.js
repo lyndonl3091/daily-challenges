@@ -1,3 +1,11 @@
+// what is functional programming
+
+// classes 
+
+// isomorphism?
+
+// clssical vs prototypal inheritance
+
 function camelCaser (str) {
 	let words = str.split(' ');
 
