@@ -18,3 +18,24 @@ function checkOccurence(x, string) {
 
   return counter;
 }
+
+//  given an array of #s from 1-100, find one of the duplicate
+
+function findDupes(numArr) {
+  let obj = {};
+
+  for(let i=0; i<numArr.length; i++) {
+    if(!obj[numArr[i]]) {
+      obj[numArr[i]] = 1;
+    }
+    else {
+      return numArr[i];
+    }
+  }
+}
+
+
+function findAllDupes(numArr) {
+  let dupes = [];
+  
+}
