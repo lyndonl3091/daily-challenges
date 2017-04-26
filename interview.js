@@ -35,7 +35,18 @@ function findDupes(numArr) {
 }
 
 
-function findAllDupes(numArr) {
+function findDupes(numArr) {
   let dupes = [];
-  
+  let obj = {};
+
+  for(let i=0; i<numArr.length; i++) {
+    if(!obj[numArr[i]]) {
+      obj[numArr[i]] = 1;
+    }
+    else {
+      dupes.push(numArr[i]);
+    }
+  }
+
+  return dupes;
 }
