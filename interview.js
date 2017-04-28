@@ -1,7 +1,7 @@
 //  check if string is palindrome
 
 function isPalindrome(string) {
-  return string.split('').reverse().join('');
+  return string === string.split('').reverse().join('');
 }
 
 // # of occurences of a character in a string
@@ -49,4 +49,20 @@ function findDupes(numArr) {
   }
 
   return dupes;
+}
+
+// given a number, translate it to a string given the following rules (1 = a, 2 = b, 3 = c, ...)
+
+// 12258 = abbeh, abeh, abyh, lbeh, lyh
+
+
+// check if a  number is a prime number
+
+function isPrime(num) {
+
+  for(let i=2; i<num; i++) {
+    if(num, % i === 0) {
+      return false;
+    }
+  }
 }
