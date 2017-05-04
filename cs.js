@@ -204,3 +204,24 @@ function deleteNodeDLL(val){
    }
    return dll;
 }
+
+// bubble sort
+
+//  sort from least to largest
+
+function bubbleSort(x) {
+  let swapped;
+
+  do {
+    swapped = false;
+    for(let i=0; i<x.legnth-1; i++) {
+      if(x[i] > x[i+2]) {
+        let temp = x[i];
+        x[i] = x[i+1]
+        x[i+1] = temp;
+        swapped=true
+      }
+    }
+    while(swapped);
+  }
+}
