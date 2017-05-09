@@ -225,3 +225,25 @@ function bubbleSort(x) {
     while(swapped);
   }
 }
+
+// insertion sort
+
+function insertionSort(x) {
+
+}
+
+// implement a stack.   LIFO ,  use pop method
+
+let stack = [];
+stack.push(1);
+stack.push(2);
+
+let x = stack.pop();
+
+// queue.  FIFO.   use shit method to get first element
+
+let queue = [];
+queue.ppush(1);
+queue.ppush(2);
+
+let y = queue.shift();
