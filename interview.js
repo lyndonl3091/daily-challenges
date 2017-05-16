@@ -78,3 +78,13 @@ function fact(num) {
     return num + factorial(num - 1);
   }
 }
+
+// find the item that appears the most in the list
+
+function getMostAppeared(arr) {
+  let obj = {}
+
+  // use ref
+  // iterate through array and save to ref # of times each item appears
+  
+}
