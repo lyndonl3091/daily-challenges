@@ -86,5 +86,12 @@ function getMostAppeared(arr) {
 
   // use ref
   // iterate through array and save to ref # of times each item appears
-  
+
+}
+
+// write fibinocci sequence
+
+function fib(a, b) {
+// given the first 2 numbers
+
 }
